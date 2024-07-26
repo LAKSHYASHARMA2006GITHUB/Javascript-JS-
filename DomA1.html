@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment</title>
+    <style>
+        .input {
+            margin: 10px;
+        }
+
+        #textcopy {
+            height: 200px;
+            width: 700px;
+            margin: 20px;
+            border: 2px solid black;
+        }
+
+        .count {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <textarea name="" id="dom1" rows="10" cols="50"></textarea>
+
+    <h2>Css properties</h2>
+    <input type="text" id="color">
+    <input type="text" id="textcolor">
+    <input type="number" id="no">
+    <div class="" id="textcopy"></div>
+    <div class="count">Total letters:</div>
+    </div>
+    </div>
+    <script>
+        document.getElementById("dom1").oninput = function () {
+            let d1 = document.getElementById("dom1").value;
+            console.log(d1)
+            document.getElementById("textcopy").innerHTML = d1;
+            document.querySelector(".count").innerHTML = "Total letters:" + d1.length;
+        }
+
+
+        document.querySelector("#color").oninput = function () {
+            let c1 = document.querySelector("#color").value;
+            console.log(c1)
+            document.getElementById("textcopy").style.backgroundColor = c1;
+        }
+
+
+        document.querySelector("#textcolor").oninput = function () {
+            let c2 = document.querySelector("#textcolor").value;
+            console.log(c2)
+            document.getElementById("textcopy").style.color = c2;
+        }
+
+        document.querySelector("#no").oninput = function(){
+            let c3 = document.querySelector("#no").value;
+            console.log(c3)
+            document.getElementById("textcopy").style.fontSize=c3+"px";
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>
